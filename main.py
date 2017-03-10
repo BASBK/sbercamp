@@ -1,6 +1,6 @@
 import os
 import telebot
-from flask import Flask
+from flask import Flask, request
 import config
 import texts
 
@@ -41,6 +41,12 @@ def handle_text(message):
         bot.send_message(message.from_user.id, texts.anyInputText, reply_markup=config.start_menu())
 
 #bot.polling(none_stop=True)
+
+
+@server.route("/", methods=['POST'])
+def getMessage():
+    bot.process_new_updates([telebot.types.Update.de_json(request.stream.read().decode("utf-8"))])
+    return "!", 200
 
 
 @server.route("/")
