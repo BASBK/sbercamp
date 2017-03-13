@@ -14,7 +14,7 @@ def start_menu():
 
 
 def program_menu():
-    user_markup = telebot.types.ReplyKeyboardMarkup(True, True)
+    user_markup = telebot.types.ReplyKeyboardMarkup(True, False)
     # 22
     user_markup.row('2️⃣2️⃣ марта')
     # 23
