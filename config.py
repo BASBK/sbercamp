@@ -25,3 +25,11 @@ def program_menu():
     user_markup.row('2️⃣5️⃣ марта')
     user_markup.row('⬅️Назад')
     return user_markup
+
+
+def speaker_menu():
+    user_markup = telebot.types.ReplyKeyboardMarkup(True, False)
+    user_markup.row('Сергей Король')
+    user_markup.row('Татьяна Иванова')
+    user_markup.row('⬅️Назад')
+    return user_markup

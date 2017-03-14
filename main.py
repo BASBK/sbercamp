@@ -3,12 +3,15 @@ import telebot
 from flask import Flask, request
 import config
 import texts
-
+import logging
 
 bot = telebot.TeleBot(config.token)
 
 server = Flask(__name__)
 
+
+# logger = telebot.logger
+# telebot.logger.setLevel(logging.DEBUG)
 
 @bot.message_handler(commands=['start'])
 def handle_start(message):
@@ -22,7 +25,13 @@ def handle_text(message):
     elif message.text.find('Назад') != -1:
         bot.send_message(message.from_user.id, texts.anyInputText, reply_markup=config.start_menu())
     elif message.text.find('Спикеры') != -1:
-        bot.send_message(message.from_user.id, texts.speakersText)
+        bot.send_message(message.from_user.id, texts.speakersText, reply_markup=config.speaker_menu())
+    elif message.text.find('Сергей Король') != -1:
+        bot.send_message(message.from_user.id, texts.speaker_Korol)
+        bot.send_video(message.from_user.id, texts.speaker_Korol_video)
+    elif message.text.find('Татьяна Иванова') != -1:
+        bot.send_message(message.from_user.id, texts.speaker_Ivanova)
+        bot.send_photo(message.from_user.id, texts.speaker_Ivanova_img)
     elif message.text.find('Чат') != -1:
         bot.send_message(message.from_user.id, texts.chatText)
     elif message.text.find('Стикеры') != -1:
@@ -56,3 +65,4 @@ def webhook():
     return "!", 200
 
 server.run(host="0.0.0.0", port=os.environ.get('PORT', 5000))
+
