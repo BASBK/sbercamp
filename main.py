@@ -10,8 +10,8 @@ bot = telebot.TeleBot(config.token)
 server = Flask(__name__)
 
 
-# logger = telebot.logger
-# telebot.logger.setLevel(logging.DEBUG)
+logger = telebot.logger
+telebot.logger.setLevel(logging.DEBUG)
 
 @bot.message_handler(commands=['start'])
 def handle_start(message):
@@ -32,6 +32,18 @@ def handle_text(message):
     elif message.text.find('Татьяна Иванова') != -1:
         bot.send_message(message.from_user.id, texts.speaker_Ivanova)
         bot.send_photo(message.from_user.id, texts.speaker_Ivanova_img)
+    elif message.text.find('Сергей Ешанов') != -1:
+        bot.send_message(message.from_user.id, texts.speaker_Eshanov)
+        bot.send_video(message.from_user.id, texts.speaker_Eshanov_video)
+    elif message.text.find('Александр Якунин') != -1:
+        bot.send_message(message.from_user.id, texts.speaker_Yakunin)
+        bot.send_video(message.from_user.id, texts.speaker_Yakunin_video)
+    elif message.text.find('Василий Ящук') != -1:
+        bot.send_message(message.from_user.id, texts.speaker_Yaschuk, disable_web_page_preview=True)
+        bot.send_photo(message.from_user.id, texts.speaker_Yaschuk_img)
+    elif message.text.find('Павел Перец') != -1:
+        bot.send_message(message.from_user.id, texts.speaker_Perec, disable_web_page_preview=True)
+        bot.send_document(message.from_user.id, texts.speaker_Perec_doc)
     elif message.text.find('Чат') != -1:
         bot.send_message(message.from_user.id, texts.chatText)
     elif message.text.find('Стикеры') != -1:
@@ -47,9 +59,9 @@ def handle_text(message):
     elif message.text.find('2️⃣5️⃣ марта') != -1:
         bot.send_message(message.from_user.id, texts.march25)
     else:
-        bot.send_message(message.from_user.id, texts.anyInputText, reply_markup=config.start_menu())
+        bot.send_message(message.from_user.id, texts.anyInputText)
 
-#bot.polling(none_stop=True)
+# bot.polling(none_stop=True)
 
 
 @server.route("/", methods=['POST'])
@@ -65,4 +77,4 @@ def webhook():
     return "!", 200
 
 server.run(host="0.0.0.0", port=os.environ.get('PORT', 5000))
-
+# server.run()
