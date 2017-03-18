@@ -31,7 +31,7 @@ def handle_text(message):
         bot.send_video(message.from_user.id, texts.speaker_Korol_video)
     elif message.text.find('Татьяна Иванова') != -1:
         bot.send_message(message.from_user.id, texts.speaker_Ivanova)
-        bot.send_photo(message.from_user.id, texts.speaker_Ivanova_img)
+        bot.send_video(message.from_user.id, texts.speaker_Ivanova_video)
     elif message.text.find('Сергей Ешанов') != -1:
         bot.send_message(message.from_user.id, texts.speaker_Eshanov)
         bot.send_video(message.from_user.id, texts.speaker_Eshanov_video)
@@ -40,7 +40,7 @@ def handle_text(message):
         bot.send_video(message.from_user.id, texts.speaker_Yakunin_video)
     elif message.text.find('Василий Ящук') != -1:
         bot.send_message(message.from_user.id, texts.speaker_Yaschuk, disable_web_page_preview=True)
-        bot.send_photo(message.from_user.id, texts.speaker_Yaschuk_img)
+        bot.send_video(message.from_user.id, texts.speaker_Yaschuk_video)
     elif message.text.find('Павел Перец') != -1:
         bot.send_message(message.from_user.id, texts.speaker_Perec, disable_web_page_preview=True)
         bot.send_document(message.from_user.id, texts.speaker_Perec_doc)

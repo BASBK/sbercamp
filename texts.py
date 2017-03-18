@@ -22,7 +22,7 @@ speaker_Korol_video = 'BAADAgADEwADJOxBSpogMKDkfhxmAg'
 speaker_Ivanova = 'Таня Иванова - куратор потока «YouTube vlogging» Куратор фестивалей #vidfest и #vkfest, амбассодор YouTube.' \
                   ' Эксперт в сфере социальных медиа, основатель digital-агентства helloblogger.ru'
 
-speaker_Ivanova_img = 'AgADAgAD5qcxGyTsQUrDqc3CBwABs_R6N0sNAATWyzAeTKBzEho3BgABAg'
+speaker_Ivanova_video = 'BAADAgADDgADDJBoSsa67FmEmhCLAg'
 
 speaker_Eshanov = 'Сергей Ешанов - куратор потока "Facebook/vkontakte: трендсеттеры и лидеры мнений\n\n' \
                   'Сооснователь digital-агентства Rabbit и агентства по работе с блогерами и блогерским контентом Carrot\n' \
@@ -66,7 +66,7 @@ speaker_Yaschuk = 'Василий Ящук - спикер на поток "YouTu
                   'Автор крупнейшего в России канала, посвящённого рекламе на YouTube https://www.youtube.com/user/heroinbox/ \n' \
                   'Преподаватель курса Digital Video в Нетологии. Старший брат Егора Крида.'
 
-speaker_Yaschuk_img = 'AgADAgADs6cxGyxeWUow4EcSKknQm08LSw0ABDWPThqgp_mrwTMGAAEC'
+speaker_Yaschuk_video = 'BAADAgADDQADDJBoSjzx9do0nafcAg'
 
 speaker_Perec = 'Павел Перец - расскажет о нативнай рекламе в медиа.\n\n' \
                 'По профессии столяр-краснодеревщик (Лицей традиционной культуры), инженер (СПбГУТ), ' \
