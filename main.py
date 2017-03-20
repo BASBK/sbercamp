@@ -61,7 +61,7 @@ def handle_text(message):
     else:
         bot.send_message(message.from_user.id, texts.anyInputText)
 
-bot.polling(none_stop=True)
+# bot.polling(none_stop=True)
 
 
 @server.route("/", methods=['POST'])
@@ -73,8 +73,8 @@ def getMessage():
 @server.route("/")
 def webhook():
     bot.remove_webhook()
-    # bot.set_webhook(url="https://sber-camp-bot.herokuapp.com/")
+    bot.set_webhook(url="https://sber-camp-bot.herokuapp.com/")
     return "!", 200
 
-# server.run(host="0.0.0.0", port=os.environ.get('PORT', 5000))
-server.run()
+server.run(host="0.0.0.0", port=os.environ.get('PORT', 5000))
+# server.run()
