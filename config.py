@@ -33,7 +33,6 @@ def speaker_menu():
     user_markup.row('Татьяна Иванова')
     user_markup.row('Сергей Ешанов')
     user_markup.row('Александр Якунин')
-    user_markup.row('Василий Ящук')
     user_markup.row('Павел Перец')
     user_markup.row('⬅️Назад')
     return user_markup
