@@ -78,7 +78,7 @@ speaker_Perec = 'Павел Перец - расскажет о нативнай 
                 '«Россия: чужой взгляд» https://www.youtube.com/peretzpavel \n' \
                 'С марта 2011 возглавляет отдел SMM в интернет-агентстве Realweb http://www.realweb.ru/.'
 
-speaker_Perec_doc = 'BQADAgADBgADLF5ZSkzbJX4oMLAuAg'
+speaker_Perec_video = 'BAADAgADLAAD8BqASjudas1C9-WnAg'
 
 chatText = '😎Это наш чат и в нем мы можем:\n' \
            '- общаться\n' \

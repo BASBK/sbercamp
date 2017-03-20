@@ -10,8 +10,8 @@ bot = telebot.TeleBot(config.token)
 server = Flask(__name__)
 
 
-# logger = telebot.logger
-# telebot.logger.setLevel(logging.DEBUG)
+logger = telebot.logger
+telebot.logger.setLevel(logging.DEBUG)
 
 @bot.message_handler(commands=['start'])
 def handle_start(message):
@@ -43,7 +43,7 @@ def handle_text(message):
         bot.send_video(message.from_user.id, texts.speaker_Yaschuk_video)
     elif message.text.find('Павел Перец') != -1:
         bot.send_message(message.from_user.id, texts.speaker_Perec, disable_web_page_preview=True)
-        bot.send_document(message.from_user.id, texts.speaker_Perec_doc)
+        bot.send_video(message.from_user.id, texts.speaker_Perec_video)
     elif message.text.find('Чат') != -1:
         bot.send_message(message.from_user.id, texts.chatText)
     elif message.text.find('Стикеры') != -1:
@@ -61,7 +61,7 @@ def handle_text(message):
     else:
         bot.send_message(message.from_user.id, texts.anyInputText)
 
-# bot.polling(none_stop=True)
+bot.polling(none_stop=True)
 
 
 @server.route("/", methods=['POST'])
@@ -73,8 +73,8 @@ def getMessage():
 @server.route("/")
 def webhook():
     bot.remove_webhook()
-    bot.set_webhook(url="https://sber-camp-bot.herokuapp.com/")
+    # bot.set_webhook(url="https://sber-camp-bot.herokuapp.com/")
     return "!", 200
 
-server.run(host="0.0.0.0", port=os.environ.get('PORT', 5000))
-# server.run()
+# server.run(host="0.0.0.0", port=os.environ.get('PORT', 5000))
+server.run()
