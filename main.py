@@ -10,8 +10,8 @@ bot = telebot.TeleBot(config.token)
 server = Flask(__name__)
 
 
-logger = telebot.logger
-telebot.logger.setLevel(logging.DEBUG)
+# logger = telebot.logger
+# telebot.logger.setLevel(logging.DEBUG)
 
 @bot.message_handler(commands=['start'])
 def handle_start(message):
