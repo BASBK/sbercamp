@@ -29,7 +29,7 @@ def handle_text(message):
     elif message.text.find('Сергей Король') != -1:
         bot.send_message(message.from_user.id, texts.speaker_Korol)
         bot.send_video(message.from_user.id, texts.speaker_Korol_video)
-    elif message.text.find('Татьяна Иванова') != -1:
+    elif message.text.find('Таня Иванова') != -1:
         bot.send_message(message.from_user.id, texts.speaker_Ivanova)
         bot.send_video(message.from_user.id, texts.speaker_Ivanova_video)
     elif message.text.find('Сергей Ешанов') != -1:

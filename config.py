@@ -30,7 +30,7 @@ def program_menu():
 def speaker_menu():
     user_markup = telebot.types.ReplyKeyboardMarkup(True, False)
     user_markup.row('Сергей Король')
-    user_markup.row('Татьяна Иванова')
+    user_markup.row('Таня Иванова')
     user_markup.row('Сергей Ешанов')
     user_markup.row('Александр Якунин')
     user_markup.row('Павел Перец')
